@@ -1,4 +1,17 @@
 {
     "name": "intentic",
-    "plugins": []
+    "plugins": [
+        {
+            "name": "intentic.example",
+            "kind": "extension",
+            "trust": "listed",
+            "description": "The reference intentic extension — one contribution of every kind, built the way the docs say to build one.",
+            "version": "1.0.0",
+            "source": {
+                "source": "github",
+                "repo": "intentic/extension-example",
+                "sha": "9305c108986b03875ea559a7e59f9004df550e7f"
+            }
+        }
+    ]
 }
