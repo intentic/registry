@@ -1,17 +1,73 @@
 {
-    "name": "intentic",
-    "plugins": [
-        {
-            "name": "intentic.example",
-            "kind": "extension",
-            "trust": "listed",
-            "description": "The reference intentic extension — one contribution of every kind, built the way the docs say to build one.",
-            "version": "1.0.0",
-            "source": {
-                "source": "github",
-                "repo": "intentic/extension-example",
-                "sha": "9305c108986b03875ea559a7e59f9004df550e7f"
-            }
-        }
-    ]
+  "name": "intentic",
+  "plugins": [
+    {
+      "name": "intentic.example",
+      "kind": "extension",
+      "trust": "listed",
+      "description": "The reference intentic extension — one contribution of every kind, built the way the docs say to build one.",
+      "version": "1.0.0",
+      "source": {
+        "source": "github",
+        "repo": "intentic/extension-example",
+        "sha": "9305c108986b03875ea559a7e59f9004df550e7f"
+      }
+    },
+    {
+      "name": "intentic.everyday-viewers",
+      "kind": "extension",
+      "trust": "listed",
+      "description": "Calendars, spreadsheets, GPS tracks, subtitles and fonts, rendered as what they are. Reads nothing from the daemon.",
+      "version": "1.0.0",
+      "category": "workspace",
+      "icon": "file",
+      "source": {
+        "source": "github",
+        "repo": "radarsu/intentic-everyday-viewers",
+        "sha": "1539580a3fc05dcdb12fcd67cff757544e5a81de"
+      }
+    },
+    {
+      "name": "intentic.contact-sheet",
+      "kind": "extension",
+      "trust": "listed",
+      "description": "Folders of photos in the workspace tree, as a contact sheet — with EXIF rotation and taken-dates.",
+      "version": "1.0.0",
+      "category": "workspace",
+      "icon": "th-large",
+      "source": {
+        "source": "github",
+        "repo": "radarsu/intentic-contact-sheet",
+        "sha": "5b17f40bca49dd2a29c88ccf32b7215d9ac26556"
+      }
+    },
+    {
+      "name": "intentic.paperwork",
+      "kind": "extension",
+      "trust": "listed",
+      "description": "Document tools for the agent: convert, read, OCR, merge and split PDFs, docx, odt, epub and scans.",
+      "version": "1.0.0",
+      "category": "workspace",
+      "icon": "file-pdf",
+      "source": {
+        "source": "github",
+        "repo": "radarsu/intentic-paperwork",
+        "sha": "253b3a1d96780987f604fca1ec2c25abd0f984d6"
+      }
+    },
+    {
+      "name": "intentic.homelab",
+      "kind": "extension",
+      "trust": "listed",
+      "description": "Capability cards for the servers people run at home: Home Assistant, Paperless-ngx, Jellyfin, Immich.",
+      "version": "1.0.0",
+      "category": "connections",
+      "icon": "server",
+      "source": {
+        "source": "github",
+        "repo": "radarsu/intentic-homelab",
+        "sha": "d3bd54b69fc4fefd379f33305049c27763e6305d"
+      }
+    }
+  ]
 }
