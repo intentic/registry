@@ -7,10 +7,11 @@
       "trust": "listed",
       "description": "The reference intentic extension — one contribution of every kind, built the way the docs say to build one.",
       "version": "1.0.0",
+      "icon": "sparkles",
       "source": {
         "source": "github",
         "repo": "intentic/extension-example",
-        "sha": "9305c108986b03875ea559a7e59f9004df550e7f"
+        "sha": "b129cfc42c163217885722b536e06f31d228df87"
       }
     },
     {
@@ -24,7 +25,7 @@
       "source": {
         "source": "github",
         "repo": "radarsu/intentic-everyday-viewers",
-        "sha": "1539580a3fc05dcdb12fcd67cff757544e5a81de"
+        "sha": "9bb6268ec93aead141ccd5b937054f9ac3f03c81"
       }
     },
     {
@@ -38,7 +39,7 @@
       "source": {
         "source": "github",
         "repo": "radarsu/intentic-contact-sheet",
-        "sha": "5b17f40bca49dd2a29c88ccf32b7215d9ac26556"
+        "sha": "05771e51926cd8edf1d30c4fdbb927a78656cca4"
       }
     },
     {
@@ -52,7 +53,7 @@
       "source": {
         "source": "github",
         "repo": "radarsu/intentic-paperwork",
-        "sha": "253b3a1d96780987f604fca1ec2c25abd0f984d6"
+        "sha": "1f8f3c23408db886a9c3367e6e3857021aca1c9c"
       }
     },
     {
@@ -66,7 +67,21 @@
       "source": {
         "source": "github",
         "repo": "radarsu/intentic-homelab",
-        "sha": "d3bd54b69fc4fefd379f33305049c27763e6305d"
+        "sha": "098f5e44b73fe2c1d8cf7f76b71273cee92eb39d"
+      }
+    },
+    {
+      "name": "intentic.feeds",
+      "kind": "extension",
+      "trust": "listed",
+      "description": "Watch an RSS or Atom feed — a blog, a release page, a podcast — and wake an automation when it publishes.",
+      "version": "1.0.0",
+      "category": "connections",
+      "icon": "wave-pulse",
+      "source": {
+        "source": "github",
+        "repo": "radarsu/intentic-feeds",
+        "sha": "654e7ea9dd13077e98c0188588c6eb57ed16bf0e"
       }
     }
   ]
