@@ -83,6 +83,20 @@
         "repo": "radarsu/intentic-feeds",
         "sha": "654e7ea9dd13077e98c0188588c6eb57ed16bf0e"
       }
+    },
+    {
+      "name": "intentic.logs",
+      "kind": "extension",
+      "trust": "listed",
+      "description": "The sandbox's durable debug log surface — terminal session captures, intentic run logs and the daemon's own log, read from /history/logs.",
+      "version": "1.0.0",
+      "category": "sandbox",
+      "icon": "file",
+      "source": {
+        "source": "github",
+        "repo": "intentic/extension-logs",
+        "sha": "d87b891ebc2cba5fcfbd15a5e7a7f5cfc3f80bb5"
+      }
     }
   ]
 }
