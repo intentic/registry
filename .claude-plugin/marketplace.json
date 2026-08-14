@@ -7,6 +7,7 @@
       "trust": "listed",
       "description": "The reference intentic extension — one contribution of every kind, built the way the docs say to build one.",
       "version": "1.0.0",
+      "art": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\"><rect width=\"32\" height=\"32\" fill=\"#6C4FE0\"/><path d=\"M14 4.5l2.4 7.1 7.1 2.4-7.1 2.4-2.4 7.1-2.4-7.1-7.1-2.4 7.1-2.4z\" fill=\"#fff\"/><path d=\"M23.5 18.5l1.3 3.7 3.7 1.3-3.7 1.3-1.3 3.7-1.3-3.7-3.7-1.3 3.7-1.3z\" fill=\"#C4B4FF\"/></svg>",
       "icon": "sparkles",
       "source": {
         "source": "github",
@@ -21,6 +22,7 @@
       "description": "Calendars, spreadsheets, GPS tracks, subtitles and fonts, rendered as what they are. Reads nothing from the daemon.",
       "version": "1.0.0",
       "category": "workspace",
+      "art": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\"><rect width=\"32\" height=\"32\" fill=\"#C4417F\"/><rect x=\"4.5\" y=\"8\" width=\"12.5\" height=\"17\" rx=\"2\" fill=\"#F09CC4\" transform=\"rotate(-16 10.75 16.5)\"/><rect x=\"9.75\" y=\"7.5\" width=\"12.5\" height=\"17\" rx=\"2\" fill=\"#F8CBE1\" transform=\"rotate(-5 16 16)\"/><g transform=\"rotate(9 21 15.5)\"><rect x=\"14.75\" y=\"7\" width=\"12.5\" height=\"17\" rx=\"2\" fill=\"#fff\"/><rect x=\"17.4\" y=\"11.2\" width=\"7.2\" height=\"2\" rx=\"1\" fill=\"#C4417F\"/><rect x=\"17.4\" y=\"15\" width=\"7.2\" height=\"2\" rx=\"1\" fill=\"#C4417F\"/><rect x=\"17.4\" y=\"18.8\" width=\"4.6\" height=\"2\" rx=\"1\" fill=\"#EE8FBB\"/></g></svg>",
       "icon": "file",
       "source": {
         "source": "github",
@@ -35,6 +37,7 @@
       "description": "Folders of photos in the workspace tree, as a contact sheet — with EXIF rotation and taken-dates.",
       "version": "1.0.0",
       "category": "workspace",
+      "art": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\"><rect width=\"32\" height=\"32\" fill=\"#2E6FE0\"/><rect x=\"4.5\" y=\"4.5\" width=\"11\" height=\"10\" rx=\"1.8\" fill=\"#fff\"/><rect x=\"16.5\" y=\"4.5\" width=\"11\" height=\"10\" rx=\"1.8\" fill=\"#AFCCF8\"/><rect x=\"4.5\" y=\"17.5\" width=\"11\" height=\"10\" rx=\"1.8\" fill=\"#AFCCF8\"/><rect x=\"16.5\" y=\"17.5\" width=\"11\" height=\"10\" rx=\"1.8\" fill=\"#fff\"/><path d=\"M6.4 14.5h7.2L10 9.4z\" fill=\"#2E6FE0\"/><circle cx=\"12.6\" cy=\"7.9\" r=\"1.5\" fill=\"#FFC24D\"/></svg>",
       "icon": "th-large",
       "source": {
         "source": "github",
@@ -49,6 +52,7 @@
       "description": "Document tools for the agent: convert, read, OCR, merge and split PDFs, docx, odt, epub and scans.",
       "version": "1.0.0",
       "category": "workspace",
+      "art": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\"><rect width=\"32\" height=\"32\" fill=\"#D0402F\"/><path d=\"M7.5 3.5h11.7l6.3 6.3V28.5H7.5z\" fill=\"#fff\"/><path d=\"M19.2 3.5l6.3 6.3h-6.3z\" fill=\"#F5B0A8\"/><rect x=\"10.8\" y=\"14\" width=\"11.4\" height=\"2.4\" rx=\"1.2\" fill=\"#D0402F\"/><rect x=\"10.8\" y=\"18.8\" width=\"11.4\" height=\"2.4\" rx=\"1.2\" fill=\"#D0402F\"/><rect x=\"10.8\" y=\"23.6\" width=\"6.6\" height=\"2.4\" rx=\"1.2\" fill=\"#F08578\"/></svg>",
       "icon": "file-pdf",
       "source": {
         "source": "github",
@@ -63,6 +67,7 @@
       "description": "Capability cards for the servers people run at home: Home Assistant, Paperless-ngx, Jellyfin, Immich.",
       "version": "1.0.0",
       "category": "connections",
+      "art": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\"><rect width=\"32\" height=\"32\" fill=\"#0E9F8C\"/><path d=\"M16 3.5L2.5 14.5H7V28.5h18V14.5h4.5z\" fill=\"#fff\"/><rect x=\"10\" y=\"17\" width=\"12\" height=\"4.4\" rx=\"1.2\" fill=\"#0E9F8C\"/><rect x=\"10\" y=\"22.8\" width=\"12\" height=\"4.4\" rx=\"1.2\" fill=\"#0E9F8C\"/><circle cx=\"12.6\" cy=\"19.2\" r=\"1.1\" fill=\"#FFD05C\"/><circle cx=\"12.6\" cy=\"25\" r=\"1.1\" fill=\"#FFD05C\"/></svg>",
       "icon": "server",
       "source": {
         "source": "github",
@@ -77,6 +82,7 @@
       "description": "Watch an RSS or Atom feed — a blog, a release page, a podcast — and wake an automation when it publishes.",
       "version": "1.0.0",
       "category": "connections",
+      "art": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\"><rect width=\"32\" height=\"32\" fill=\"#F0801F\"/><g fill=\"none\" stroke=\"#fff\" stroke-width=\"3.6\" stroke-linecap=\"round\"><path d=\"M8.6 15.4A9 9 0 0117.6 24.4\"/><path d=\"M8.6 8.4A16 16 0 0124.6 24.4\"/></g><circle cx=\"8.8\" cy=\"23.6\" r=\"2.8\" fill=\"#fff\"/></svg>",
       "icon": "wave-pulse",
       "source": {
         "source": "github",
@@ -91,6 +97,7 @@
       "description": "The sandbox's durable debug log surface — terminal session captures, intentic run logs and the daemon's own log, read from /history/logs.",
       "version": "1.0.0",
       "category": "sandbox",
+      "art": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\"><rect width=\"32\" height=\"32\" fill=\"#39485F\"/><rect x=\"3.5\" y=\"5.5\" width=\"25\" height=\"21\" rx=\"3\" fill=\"#161F2E\"/><path d=\"M3.5 8.5a3 3 0 013-3h19a3 3 0 013 3v2.5h-25z\" fill=\"#54657F\"/><circle cx=\"7.4\" cy=\"8.2\" r=\"1.15\" fill=\"#FF6B5E\"/><circle cx=\"11\" cy=\"8.2\" r=\"1.15\" fill=\"#FFC24D\"/><circle cx=\"14.6\" cy=\"8.2\" r=\"1.15\" fill=\"#3DDC84\"/><path d=\"M8 15.4l3.6 3.4L8 22.2\" fill=\"none\" stroke=\"#3DDC84\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><rect x=\"14.4\" y=\"20.4\" width=\"9.6\" height=\"2.4\" rx=\"1.2\" fill=\"#9DB1CC\"/></svg>",
       "icon": "file",
       "source": {
         "source": "github",
