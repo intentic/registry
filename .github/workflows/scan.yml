@@ -21,10 +21,20 @@ concurrency:
 
 jobs:
     scan:
-        runs-on: ubuntu-latest
+        # Pinned, not `ubuntu-latest`: this job holds `contents: write` on the branch the listing is read from,
+        # so what it runs on is part of what it is trusted with. Same reason every version below is pinned.
+        runs-on: ubuntu-24.04
         steps:
-            - uses: actions/checkout@v7
-            - uses: actions/setup-node@v7
+            # DIGEST-PINNED, like intentic/intentic pins every action it uses. A tag is a pointer somebody else
+            # can move, and this job pushes to `main` and opens pull requests — a moved `v7` would be an
+            # unreviewed change running with those permissions. The comment carries the human-readable version
+            # so the pin stays legible.
+            #
+            # There is no renovate here (the sibling repo has one and this repo has three pins), so these three
+            # versions are bumped by hand. That is the trade: a stale pin is a visible line in this file, an
+            # unpinned tag is a silent change at 03:17.
+            - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+            - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
               with:
                   node-version: "22"
 
@@ -32,10 +42,15 @@ jobs:
             # .scan/proposals/<extension-id>/ holding a complete candidate marketplace.json plus the pull
             # request's title and body. Every decision about JSON is made in there, so the steps below only
             # ever move whole files around.
+            #
+            # PINNED TO AN EXACT VERSION for the same reason the actions above are, and here it mattered more:
+            # `npx --yes @intentic/registry-scan` resolved whatever npm called latest, at 03:17, into a job that
+            # then pushed to `main` — a mutable third-party fetch with write access to the branch this registry
+            # publishes. Bumping this line is how a new scanner ships, and that bump is a reviewable diff.
             - name: Scan
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-              run: npx --yes @intentic/registry-scan
+              run: npx --yes @intentic/registry-scan@1.176.3
 
             - name: Publish the run summary
               run: cat .scan/summary.md >> "$GITHUB_STEP_SUMMARY"
@@ -55,6 +70,12 @@ jobs:
             - name: Open a pull request per proposal
               env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  # Through the environment, not interpolated into the script below. `${{ }}` inside a `run:`
+                  # block is textual substitution BEFORE the shell parses the line, so the value becomes script
+                  # rather than an argument to it — and this job holds `contents: write` on the branch it is
+                  # naming. A repository default branch is not attacker-controllable in practice; the shape is,
+                  # and this is the block a second workflow would be copied from.
+                  DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
               run: |
                   set -euo pipefail
                   shopt -s nullglob
@@ -65,11 +86,11 @@ jobs:
                           echo "· $id already has an open pull request"
                           continue
                       fi
-                      git checkout -B "$branch" origin/${{ github.event.repository.default_branch }}
+                      git checkout -B "$branch" "origin/$DEFAULT_BRANCH"
                       cp "$dir/marketplace.json" .claude-plugin/marketplace.json
                       git add .claude-plugin/marketplace.json
                       git commit -m "$(cat "$dir/title.txt")"
                       git push --force-with-lease -u origin "$branch"
-                      gh pr create --base "${{ github.event.repository.default_branch }}" --head "$branch" \
+                      gh pr create --base "$DEFAULT_BRANCH" --head "$branch" \
                           --title "$(cat "$dir/title.txt")" --body-file "$dir/body.md" --label listing
                   done
