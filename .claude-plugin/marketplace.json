@@ -104,6 +104,21 @@
         "repo": "intentic/extension-logs",
         "sha": "d87b891ebc2cba5fcfbd15a5e7a7f5cfc3f80bb5"
       }
+    },
+    {
+      "name": "intentic.saldeo",
+      "kind": "extension",
+      "trust": "listed",
+      "description": "Match a bank export against what SaldeoSMART says is open, confirm each settlement, and have the agent mark it paid.",
+      "version": "1.0.0",
+      "category": "connections",
+      "art": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\"><rect width=\"32\" height=\"32\" fill=\"#1F6F5F\"/><path d=\"M6.5 4.5h12.4l5.6 5.6v17.4H6.5z\" fill=\"#fff\"/><path d=\"M18.9 4.5l5.6 5.6h-5.6z\" fill=\"#B9E4D6\"/><rect x=\"9.4\" y=\"13.2\" width=\"9.2\" height=\"2\" rx=\"1\" fill=\"#1F6F5F\"/><rect x=\"9.4\" y=\"17.2\" width=\"7\" height=\"2\" rx=\"1\" fill=\"#1F6F5F\"/><circle cx=\"22.5\" cy=\"22.5\" r=\"6\" fill=\"#FFC24D\"/><path d=\"M19.6 22.6l2 2 3.6-3.9\" fill=\"none\" stroke=\"#1F6F5F\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "icon": "credit-card",
+      "source": {
+        "source": "github",
+        "repo": "radarsu/intentic-saldeo",
+        "sha": "709a31c87d49e50896f43a766f62e29b90283dab"
+      }
     }
   ]
 }
