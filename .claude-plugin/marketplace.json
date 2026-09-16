@@ -104,6 +104,90 @@
         "repo": "intentic/extension-logs",
         "sha": "d87b891ebc2cba5fcfbd15a5e7a7f5cfc3f80bb5"
       }
+    },
+    {
+      "name": "intentic.acceptance",
+      "kind": "extension",
+      "trust": "listed",
+      "description": "User stories and their acceptance criteria, walked through your running app by agents driving real browsers: pass or fail, with the evidence.",
+      "version": "1.0.0",
+      "category": "work",
+      "icon": "list-check",
+      "source": {
+        "source": "github",
+        "repo": "intentic/extension-acceptance",
+        "sha": "17ca672a68284a080c85ed390ac2de84b99ff49a"
+      }
+    },
+    {
+      "name": "intentic.documentation",
+      "kind": "extension",
+      "trust": "listed",
+      "description": "Plain-language architecture docs for every repository and package: agents draft, you publish. Brings the `intentic-docs` CLI and the `documenting` skill.",
+      "version": "1.0.0",
+      "category": "knowledge",
+      "icon": "question-circle",
+      "source": {
+        "source": "github",
+        "repo": "intentic/extension-documentation",
+        "sha": "b4927b65287f724e0891f3e2fa4e13383a5a4913"
+      }
+    },
+    {
+      "name": "intentic.maintenance",
+      "kind": "extension",
+      "trust": "listed",
+      "description": "The chore book: what routine upkeep each repository is owed (outdated deps, advisories, dead code, duplication), the evidence behind each verdict, and a turn per chore.",
+      "version": "1.0.0",
+      "category": "work",
+      "icon": "wrench",
+      "source": {
+        "source": "github",
+        "repo": "intentic/extension-maintenance",
+        "sha": "c1f65656f145297dad7b822bafa585850c5011ee"
+      }
+    },
+    {
+      "name": "intentic.knowledge",
+      "kind": "extension",
+      "trust": "listed",
+      "description": "A folder of markdown notes that is also a typed graph of people, projects and decisions, browsable here and queryable by the agent through the `kb` CLI and the `knowledge` skill.",
+      "version": "1.0.0",
+      "category": "knowledge",
+      "icon": "sitemap",
+      "source": {
+        "source": "github",
+        "repo": "intentic/extension-knowledge",
+        "sha": "bb32220cbb8f5eca7bd478017b05fe49de7d9e7f"
+      }
+    },
+    {
+      "name": "intentic.deployments",
+      "kind": "extension",
+      "trust": "listed",
+      "description": "Container health, incidents and one-click redeploys over a Komodo you already run.",
+      "version": "1.0.0",
+      "category": "work",
+      "icon": "box",
+      "source": {
+        "source": "github",
+        "repo": "intentic/extension-deployments",
+        "sha": "b99a0543c3958164fa308257e17fa2fa2b2b90f6"
+      }
+    },
+    {
+      "name": "intentic.issues",
+      "kind": "extension",
+      "trust": "listed",
+      "description": "The inbox of bugs your own users hit, arriving from the reporter SDK embedded in your sites and apps: triage, put an agent on one, file it away.",
+      "version": "1.0.0",
+      "category": "work",
+      "icon": "exclamation-triangle",
+      "source": {
+        "source": "github",
+        "repo": "intentic/extension-issues",
+        "sha": "8a535124ca14c18d620300818bf3e4482d95a9ba"
+      }
     }
   ]
 }
