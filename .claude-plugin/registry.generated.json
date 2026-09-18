@@ -2,39 +2,14 @@
     "scannedAt": "2026-09-15T08:38:25.654Z",
     "entries": [
         {
-            "name": "intentic.contact-sheet",
-            "stars": 0,
-            "pushedAt": "2026-09-14T14:43:05Z"
-        },
-        {
-            "name": "intentic.everyday-viewers",
-            "stars": 0,
-            "pushedAt": "2026-09-14T14:43:03Z"
-        },
-        {
             "name": "intentic.example",
             "stars": 1,
             "pushedAt": "2026-08-11T08:26:47Z"
         },
         {
-            "name": "intentic.feeds",
-            "stars": 0,
-            "pushedAt": "2026-08-11T08:27:11Z"
-        },
-        {
-            "name": "intentic.homelab",
-            "stars": 0,
-            "pushedAt": "2026-09-14T14:43:08Z"
-        },
-        {
             "name": "intentic.logs",
             "stars": 0,
             "pushedAt": "2026-08-13T23:11:09Z"
-        },
-        {
-            "name": "intentic.paperwork",
-            "stars": 0,
-            "pushedAt": "2026-09-14T14:43:19Z"
         }
     ]
 }
