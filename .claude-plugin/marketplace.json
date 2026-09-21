@@ -29,6 +29,20 @@
         "repo": "intentic/extension-logs",
         "sha": "d87b891ebc2cba5fcfbd15a5e7a7f5cfc3f80bb5"
       }
+    },
+    {
+      "name": "intentic.maintenance",
+      "kind": "extension",
+      "trust": "listed",
+      "description": "Maintenance, the chore book as a first-class surface: what routine upkeep each repository is owed, the evidence that decided it, and the turn that does it",
+      "version": "1.0.0",
+      "category": "work",
+      "icon": "wrench",
+      "source": {
+        "source": "github",
+        "repo": "intentic/extension-maintenance",
+        "sha": "c1f65656f145297dad7b822bafa585850c5011ee"
+      }
     }
   ]
 }
