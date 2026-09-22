@@ -1,15 +1,45 @@
 {
-    "scannedAt": "2026-09-21T08:53:24.569Z",
+    "scannedAt": "2026-09-22T08:30:11.709Z",
     "entries": [
+        {
+            "name": "intentic.acceptance",
+            "stars": 0,
+            "pushedAt": "2026-09-16T18:23:01Z"
+        },
+        {
+            "name": "intentic.deployments",
+            "stars": 0,
+            "pushedAt": "2026-09-16T18:23:12Z"
+        },
+        {
+            "name": "intentic.documentation",
+            "stars": 0,
+            "pushedAt": "2026-09-16T18:23:04Z"
+        },
         {
             "name": "intentic.example",
             "stars": 1,
             "pushedAt": "2026-08-11T08:26:47Z"
         },
         {
+            "name": "intentic.issues",
+            "stars": 0,
+            "pushedAt": "2026-09-16T18:23:15Z"
+        },
+        {
+            "name": "intentic.knowledge",
+            "stars": 0,
+            "pushedAt": "2026-09-16T18:23:09Z"
+        },
+        {
             "name": "intentic.logs",
             "stars": 0,
             "pushedAt": "2026-08-13T23:11:09Z"
+        },
+        {
+            "name": "intentic.maintenance",
+            "stars": 0,
+            "pushedAt": "2026-09-16T18:23:06Z"
         }
     ]
 }
