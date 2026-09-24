@@ -8,12 +8,9 @@ on:
         - cron: "17 3 * * *"
     workflow_dispatch:
 
-# Two things must be true in repo settings or the last step fails on its first run: Settings → Actions →
-# General → "Allow GitHub Actions to create and approve pull requests" must be ON, and a `listing` label must
-# exist (gh pr create --label errors on a label that doesn't).
+# A `listing` label must exist: gh pr create --label errors on a label that doesn't.
 permissions:
-    contents: write
-    pull-requests: write
+    contents: read
 
 concurrency:
     group: scan
@@ -21,26 +18,21 @@ concurrency:
 
 jobs:
     scan:
-        # Pinned, not `ubuntu-latest`: this job holds `contents: write` on the branch the listing is read from,
-        # so what it runs on is part of what it is trusted with. Same reason every version below is pinned.
-        runs-on: ubuntu-24.04
+        runs-on: ubuntu-latest
         steps:
-            # DIGEST-PINNED, like intentic/intentic pins every action it uses. A tag is a pointer somebody else
-            # can move, and this job pushes to `main` and opens pull requests — a moved `v7` would be an
-            # unreviewed change running with those permissions. The comment carries the human-readable version
-            # so the pin stays legible.
-            #
-            # There is no renovate here (the sibling repo has one and this repo has three pins), so these three
-            # versions are bumped by hand. That is the trade: a stale pin is a visible line in this file, an
-            # unpinned tag is a silent change at 03:17.
-            #
-            # THIS CHECKOUT KEEPS ITS CREDENTIAL, deliberately. `persist-credentials: false` is the right
-            # default and the sibling repo now sets it on thirty-one of its thirty-three checkouts — but the
-            # steps below `git push` to main and `git push` a branch per proposal, and the header this writes
-            # into .git/config is what authenticates them. The runner is ephemeral and GitHub-hosted, so the
-            # token does not outlive the job the way it would on a persistent self-hosted workspace, which is
-            # the risk that rule exists for.
+            # App-created commits and pull requests trigger the protected admission workflow; GITHUB_TOKEN-
+            # created events deliberately do not. The installation token is short-lived and scoped by the App.
+            - name: Mint the registry bot token
+              id: registry-token
+              uses: actions/create-github-app-token@fee1f7d63c2ff003460e3d139729b119787bc349 # v2.2.2
+              with:
+                  app-id: ${{ vars.REGISTRY_APP_ID }}
+                  private-key: ${{ secrets.REGISTRY_APP_PRIVATE_KEY }}
+                  permission-contents: write
+                  permission-pull-requests: write
             - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+              with:
+                  token: ${{ steps.registry-token.outputs.token }}
             - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
               with:
                   node-version: "22"
@@ -49,15 +41,18 @@ jobs:
             # .scan/proposals/<extension-id>/ holding a complete candidate marketplace.json plus the pull
             # request's title and body. Every decision about JSON is made in there, so the steps below only
             # ever move whole files around.
-            #
-            # PINNED TO AN EXACT VERSION for the same reason the actions above are, and here it mattered more:
-            # `npx --yes @intentic/registry-scan` resolved whatever npm called latest, at 03:17, into a job that
-            # then pushed to `main` — a mutable third-party fetch with write access to the branch this registry
-            # publishes. Bumping this line is how a new scanner ships, and that bump is a reviewable diff.
             - name: Scan
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-              run: npx --yes @intentic/registry-scan@1.176.3
+                  GITHUB_TOKEN: ${{ steps.registry-token.outputs.token }}
+                  REGISTRY_SCAN_VERSION: ${{ vars.REGISTRY_SCAN_VERSION }}
+                  NPM_CONFIG_IGNORE_SCRIPTS: "true"
+              run: |
+                  set -euo pipefail
+                  [[ "$REGISTRY_SCAN_VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]] || {
+                      echo "REGISTRY_SCAN_VERSION must be an exact published version" >&2
+                      exit 1
+                  }
+                  npm exec --yes --package="@intentic/registry-scan@$REGISTRY_SCAN_VERSION" -- intentic-registry-scan scan
 
             - name: Publish the run summary
               run: cat .scan/summary.md >> "$GITHUB_STEP_SUMMARY"
@@ -76,13 +71,8 @@ jobs:
             # instead, and the collision check then keeps it out for good.
             - name: Open a pull request per proposal
               env:
-                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                  # Through the environment, not interpolated into the script below. `${{ }}` inside a `run:`
-                  # block is textual substitution BEFORE the shell parses the line, so the value becomes script
-                  # rather than an argument to it — and this job holds `contents: write` on the branch it is
-                  # naming. A repository default branch is not attacker-controllable in practice; the shape is,
-                  # and this is the block a second workflow would be copied from.
                   DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+                  GH_TOKEN: ${{ steps.registry-token.outputs.token }}
               run: |
                   set -euo pipefail
                   shopt -s nullglob
