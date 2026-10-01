@@ -2,6 +2,33 @@
     "name": "intentic",
     "plugins": [
         {
+            "name": "intentic.acceptance",
+            "description": "Acceptance, user stories and their acceptance criteria, walked through the running app by agents driving real browsers",
+            "version": "1.0.0",
+            "kind": "extension",
+            "trust": "listed",
+            "securityReview": {
+                "sha": "da19399dd020ce3b087de5273df5003c6cd903c5",
+                "url": "https://github.com/intentic/extension-acceptance.git",
+                "policy": "intentic-extension-security-v1",
+                "reviewer": "intentic-agent-gate",
+                "reviewedAt": "2026-10-01T23:32:02.586Z",
+                "runId": "82b36762",
+                "deterministic": {
+                    "policy": "intentic-extension-deterministic-v1",
+                    "scanner": "trivy",
+                    "version": "0.72.0",
+                    "runId": "36941104947"
+                }
+            },
+            "icon": "list-check",
+            "source": {
+                "source": "github",
+                "repo": "intentic/extension-acceptance",
+                "sha": "da19399dd020ce3b087de5273df5003c6cd903c5"
+            }
+        },
+        {
             "name": "intentic.homelab",
             "description": "Capability cards for the servers people run at home — Home Assistant, Paperless-ngx, Jellyfin, Immich",
             "version": "1.0.0",
