@@ -27,6 +27,33 @@
                 "repo": "radarsu/intentic-homelab",
                 "sha": "fbb878c14f4a68999e19ea5511ad460af1f059a0"
             }
+        },
+        {
+            "name": "intentic.logs",
+            "description": "The sandbox debug log surface as a standalone intentic extension — terminal captures, run logs and the daemon log",
+            "version": "1.0.0",
+            "kind": "extension",
+            "trust": "listed",
+            "securityReview": {
+                "sha": "ace324a282e0b8aa8ba69115eade667d5adf1da9",
+                "url": "https://github.com/intentic/extension-logs.git",
+                "policy": "intentic-extension-security-v1",
+                "reviewer": "intentic-agent-gate",
+                "reviewedAt": "2026-10-01T23:33:17.640Z",
+                "runId": "df05d7b4",
+                "deterministic": {
+                    "policy": "intentic-extension-deterministic-v1",
+                    "scanner": "trivy",
+                    "version": "0.72.0",
+                    "runId": "36941181166"
+                }
+            },
+            "icon": "file",
+            "source": {
+                "source": "github",
+                "repo": "intentic/extension-logs",
+                "sha": "ace324a282e0b8aa8ba69115eade667d5adf1da9"
+            }
         }
     ]
 }
