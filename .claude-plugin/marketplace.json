@@ -3,10 +3,24 @@
     "plugins": [
         {
             "name": "intentic.homelab",
-            "kind": "extension",
-            "trust": "listed",
             "description": "Capability cards for the servers people run at home — Home Assistant, Paperless-ngx, Jellyfin, Immich",
             "version": "1.0.0",
+            "kind": "extension",
+            "trust": "listed",
+            "securityReview": {
+                "sha": "fbb878c14f4a68999e19ea5511ad460af1f059a0",
+                "url": "https://github.com/radarsu/intentic-homelab.git",
+                "policy": "intentic-extension-security-v1",
+                "reviewer": "intentic-agent-gate",
+                "reviewedAt": "2026-10-01T23:32:06.204Z",
+                "runId": "9b5956a9",
+                "deterministic": {
+                    "policy": "intentic-extension-deterministic-v1",
+                    "scanner": "trivy",
+                    "version": "0.72.0",
+                    "runId": "36941152382"
+                }
+            },
             "icon": "server",
             "source": {
                 "source": "github",
