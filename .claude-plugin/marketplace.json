@@ -110,6 +110,33 @@
             }
         },
         {
+            "name": "intentic.everyday-viewers",
+            "description": "File viewers for the formats a workspace collects that aren't source code — calendars, spreadsheets, GPS tracks, subtitles and fonts",
+            "version": "1.0.0",
+            "kind": "extension",
+            "trust": "listed",
+            "securityReview": {
+                "sha": "50b4ff594d7981714062e3d9df17a3d64df9aebf",
+                "url": "https://github.com/radarsu/intentic-everyday-viewers.git",
+                "policy": "intentic-extension-security-v1",
+                "reviewer": "intentic-agent-gate",
+                "reviewedAt": "2026-10-02T00:08:12.133Z",
+                "runId": "b3055ed0",
+                "deterministic": {
+                    "policy": "intentic-extension-deterministic-v1",
+                    "scanner": "trivy",
+                    "version": "0.72.0",
+                    "runId": "36944269385"
+                }
+            },
+            "icon": "file",
+            "source": {
+                "source": "github",
+                "repo": "radarsu/intentic-everyday-viewers",
+                "sha": "50b4ff594d7981714062e3d9df17a3d64df9aebf"
+            }
+        },
+        {
             "name": "intentic.example",
             "description": "The reference intentic extension — one contribution of every kind, built the way the docs say to build one.",
             "version": "1.0.0",
