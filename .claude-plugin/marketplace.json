@@ -110,6 +110,33 @@
             }
         },
         {
+            "name": "intentic.issues",
+            "description": "Issues — the inbox of bugs your users reported, as a first-party intentic extension",
+            "version": "1.0.0",
+            "kind": "extension",
+            "trust": "listed",
+            "securityReview": {
+                "sha": "79708fd2fea8d1875b2e6917e8bbec6cdcf19ac9",
+                "url": "https://github.com/intentic/extension-issues.git",
+                "policy": "intentic-extension-security-v1",
+                "reviewer": "intentic-agent-gate",
+                "reviewedAt": "2026-10-01T23:44:08.506Z",
+                "runId": "2ea57b6f",
+                "deterministic": {
+                    "policy": "intentic-extension-deterministic-v1",
+                    "scanner": "trivy",
+                    "version": "0.72.0",
+                    "runId": "36941159240"
+                }
+            },
+            "icon": "exclamation-triangle",
+            "source": {
+                "source": "github",
+                "repo": "intentic/extension-issues",
+                "sha": "79708fd2fea8d1875b2e6917e8bbec6cdcf19ac9"
+            }
+        },
+        {
             "name": "intentic.logs",
             "description": "The sandbox debug log surface as a standalone intentic extension — terminal captures, run logs and the daemon log",
             "version": "1.0.0",
