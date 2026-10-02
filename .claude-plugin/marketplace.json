@@ -29,6 +29,33 @@
             }
         },
         {
+            "name": "intentic.contact-sheet",
+            "description": "Any folder of photos in the workspace tree, as a contact sheet you can look at instead of a list of filenames",
+            "version": "1.0.0",
+            "kind": "extension",
+            "trust": "listed",
+            "securityReview": {
+                "sha": "61b66d8d71cd190d7162c4ee2146455795f5583e",
+                "url": "https://github.com/radarsu/intentic-contact-sheet.git",
+                "policy": "intentic-extension-security-v1",
+                "reviewer": "intentic-agent-gate",
+                "reviewedAt": "2026-10-02T00:07:21.497Z",
+                "runId": "507a0345",
+                "deterministic": {
+                    "policy": "intentic-extension-deterministic-v1",
+                    "scanner": "trivy",
+                    "version": "0.72.0",
+                    "runId": "36944257631"
+                }
+            },
+            "icon": "th-large",
+            "source": {
+                "source": "github",
+                "repo": "radarsu/intentic-contact-sheet",
+                "sha": "61b66d8d71cd190d7162c4ee2146455795f5583e"
+            }
+        },
+        {
             "name": "intentic.documentation",
             "description": "Documentation, AI-generated, human-reviewed orientation docs for every repository and package, as a first-party intentic extension",
             "version": "1.0.0",
