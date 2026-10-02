@@ -297,6 +297,33 @@
                 "repo": "intentic/extension-maintenance",
                 "sha": "219d25ee6e9c06907504543c56015cd9e5ef41c1"
             }
+        },
+        {
+            "name": "intentic.saldeo",
+            "description": "SaldeoSMART for the agent and the owner — match bank payments to open invoices, confirm, and have the agent mark them paid",
+            "version": "1.0.0",
+            "kind": "extension",
+            "trust": "listed",
+            "securityReview": {
+                "sha": "27e25ebf5b42847eac021ec00a22ed17072c14e0",
+                "url": "https://github.com/radarsu/intentic-saldeo.git",
+                "policy": "intentic-extension-security-v1",
+                "reviewer": "intentic-agent-gate",
+                "reviewedAt": "2026-10-01T23:46:47.481Z",
+                "runId": "905cc314",
+                "deterministic": {
+                    "policy": "intentic-extension-deterministic-v1",
+                    "scanner": "trivy",
+                    "version": "0.72.0",
+                    "runId": "36941200498"
+                }
+            },
+            "icon": "credit-card",
+            "source": {
+                "source": "github",
+                "repo": "radarsu/intentic-saldeo",
+                "sha": "27e25ebf5b42847eac021ec00a22ed17072c14e0"
+            }
         }
     ]
 }
