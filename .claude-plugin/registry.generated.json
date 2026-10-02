@@ -1,4 +1,148 @@
 {
-    "scannedAt": "2026-10-01T23:29:29.249Z",
-    "entries": []
+    "scannedAt": "2026-10-02T09:46:25.815Z",
+    "entries": [
+        {
+            "name": "intentic.acceptance",
+            "stars": 0,
+            "pushedAt": "2026-10-01T23:22:45Z",
+            "checks": {
+                "sha": "da19399dd020ce3b087de5273df5003c6cd903c5",
+                "manifest": "ok",
+                "bundle": "ok",
+                "engines": "^2.0.0"
+            }
+        },
+        {
+            "name": "intentic.contact-sheet",
+            "stars": 0,
+            "pushedAt": "2026-10-02T00:03:52Z",
+            "checks": {
+                "sha": "61b66d8d71cd190d7162c4ee2146455795f5583e",
+                "manifest": "ok",
+                "bundle": "ok",
+                "engines": "^2.0.0"
+            }
+        },
+        {
+            "name": "intentic.deployments",
+            "stars": 0,
+            "pushedAt": "2026-10-01T23:22:49Z",
+            "checks": {
+                "sha": "ee444fd09e018c3b1803fd905f3478f9b42d2014",
+                "manifest": "ok",
+                "bundle": "ok",
+                "engines": "^2.1.0"
+            }
+        },
+        {
+            "name": "intentic.documentation",
+            "stars": 0,
+            "pushedAt": "2026-10-01T23:22:47Z",
+            "checks": {
+                "sha": "5bc6024e886a9a94a14c7b4002c2d368ee78220c",
+                "manifest": "ok",
+                "bundle": "ok",
+                "engines": "^2.0.0"
+            }
+        },
+        {
+            "name": "intentic.everyday-viewers",
+            "stars": 0,
+            "pushedAt": "2026-10-02T00:05:19Z",
+            "checks": {
+                "sha": "50b4ff594d7981714062e3d9df17a3d64df9aebf",
+                "manifest": "ok",
+                "bundle": "ok",
+                "engines": "^2.0.0"
+            }
+        },
+        {
+            "name": "intentic.example",
+            "stars": 1,
+            "pushedAt": "2026-10-02T00:03:42Z",
+            "checks": {
+                "sha": "dbd1433f0913a490f1258fc7551453e56a241b13",
+                "manifest": "ok",
+                "bundle": "ok",
+                "engines": "^2.0.0"
+            }
+        },
+        {
+            "name": "intentic.feeds",
+            "stars": 0,
+            "pushedAt": "2026-08-11T08:27:11Z",
+            "checks": {
+                "sha": "654e7ea9dd13077e98c0188588c6eb57ed16bf0e",
+                "manifest": "ok",
+                "bundle": "none",
+                "engines": "^2.0.0"
+            }
+        },
+        {
+            "name": "intentic.homelab",
+            "stars": 0,
+            "pushedAt": "2026-09-14T14:43:08Z",
+            "checks": {
+                "sha": "fbb878c14f4a68999e19ea5511ad460af1f059a0",
+                "manifest": "ok",
+                "bundle": "none",
+                "engines": "^2.0.0"
+            }
+        },
+        {
+            "name": "intentic.issues",
+            "stars": 0,
+            "pushedAt": "2026-10-01T23:22:41Z",
+            "checks": {
+                "sha": "79708fd2fea8d1875b2e6917e8bbec6cdcf19ac9",
+                "manifest": "ok",
+                "bundle": "ok",
+                "engines": "^2.3.0"
+            }
+        },
+        {
+            "name": "intentic.knowledge",
+            "stars": 0,
+            "pushedAt": "2026-10-01T23:22:51Z",
+            "checks": {
+                "sha": "cc1cb17eff676fa0fe4e4ba674518febe56cc7cf",
+                "manifest": "ok",
+                "bundle": "ok",
+                "engines": "^2.1.0"
+            }
+        },
+        {
+            "name": "intentic.logs",
+            "stars": 0,
+            "pushedAt": "2026-08-13T23:11:09Z",
+            "checks": {
+                "sha": "ace324a282e0b8aa8ba69115eade667d5adf1da9",
+                "manifest": "ok",
+                "bundle": "ok",
+                "engines": "^2.0.0"
+            }
+        },
+        {
+            "name": "intentic.maintenance",
+            "stars": 0,
+            "pushedAt": "2026-10-01T23:22:43Z",
+            "checks": {
+                "sha": "219d25ee6e9c06907504543c56015cd9e5ef41c1",
+                "manifest": "ok",
+                "bundle": "ok",
+                "engines": "^2.0.0"
+            }
+        },
+        {
+            "name": "intentic.saldeo",
+            "stars": 1,
+            "pushedAt": "2026-09-25T22:10:55Z",
+            "checks": {
+                "sha": "27e25ebf5b42847eac021ec00a22ed17072c14e0",
+                "manifest": "ok",
+                "bundle": "ok",
+                "engines": "^2.20.0"
+            }
+        }
+    ]
 }
