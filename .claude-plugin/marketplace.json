@@ -56,6 +56,33 @@
             }
         },
         {
+            "name": "intentic.feeds",
+            "description": "Watch RSS and Atom feeds and wake an automation when one publishes — an intentic extension contributing a realtime trigger source",
+            "version": "1.0.0",
+            "kind": "extension",
+            "trust": "listed",
+            "securityReview": {
+                "sha": "654e7ea9dd13077e98c0188588c6eb57ed16bf0e",
+                "url": "https://github.com/radarsu/intentic-feeds.git",
+                "policy": "intentic-extension-security-v1",
+                "reviewer": "intentic-agent-gate",
+                "reviewedAt": "2026-10-01T23:31:31.685Z",
+                "runId": "841619dc",
+                "deterministic": {
+                    "policy": "intentic-extension-deterministic-v1",
+                    "scanner": "trivy",
+                    "version": "0.72.0",
+                    "runId": "36941144026"
+                }
+            },
+            "icon": "wave-pulse",
+            "source": {
+                "source": "github",
+                "repo": "radarsu/intentic-feeds",
+                "sha": "654e7ea9dd13077e98c0188588c6eb57ed16bf0e"
+            }
+        },
+        {
             "name": "intentic.homelab",
             "description": "Capability cards for the servers people run at home — Home Assistant, Paperless-ngx, Jellyfin, Immich",
             "version": "1.0.0",
