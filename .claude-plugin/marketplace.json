@@ -83,6 +83,33 @@
             }
         },
         {
+            "name": "intentic.example",
+            "description": "The reference intentic extension — one contribution of every kind, built the way the docs say to build one.",
+            "version": "1.0.0",
+            "kind": "extension",
+            "trust": "listed",
+            "securityReview": {
+                "sha": "dbd1433f0913a490f1258fc7551453e56a241b13",
+                "url": "https://github.com/intentic/extension-example.git",
+                "policy": "intentic-extension-security-v1",
+                "reviewer": "intentic-agent-gate",
+                "reviewedAt": "2026-10-02T00:07:29.613Z",
+                "runId": "f412ebf8",
+                "deterministic": {
+                    "policy": "intentic-extension-deterministic-v1",
+                    "scanner": "trivy",
+                    "version": "0.72.0",
+                    "runId": "36944274642"
+                }
+            },
+            "icon": "sparkles",
+            "source": {
+                "source": "github",
+                "repo": "intentic/extension-example",
+                "sha": "dbd1433f0913a490f1258fc7551453e56a241b13"
+            }
+        },
+        {
             "name": "intentic.feeds",
             "description": "Watch RSS and Atom feeds and wake an automation when one publishes — an intentic extension contributing a realtime trigger source",
             "version": "1.0.0",
