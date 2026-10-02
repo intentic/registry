@@ -137,6 +137,33 @@
             }
         },
         {
+            "name": "intentic.knowledge",
+            "description": "Knowledge, a markdown folder that is also a typed graph: the owner's notes, entities and relationships, browsable here and queryable by the agent",
+            "version": "1.0.0",
+            "kind": "extension",
+            "trust": "listed",
+            "securityReview": {
+                "sha": "cc1cb17eff676fa0fe4e4ba674518febe56cc7cf",
+                "url": "https://github.com/intentic/extension-knowledge.git",
+                "policy": "intentic-extension-security-v1",
+                "reviewer": "intentic-agent-gate",
+                "reviewedAt": "2026-10-01T23:44:30.989Z",
+                "runId": "c3c23528",
+                "deterministic": {
+                    "policy": "intentic-extension-deterministic-v1",
+                    "scanner": "trivy",
+                    "version": "0.72.0",
+                    "runId": "36941164804"
+                }
+            },
+            "icon": "sitemap",
+            "source": {
+                "source": "github",
+                "repo": "intentic/extension-knowledge",
+                "sha": "cc1cb17eff676fa0fe4e4ba674518febe56cc7cf"
+            }
+        },
+        {
             "name": "intentic.logs",
             "description": "The sandbox debug log surface as a standalone intentic extension — terminal captures, run logs and the daemon log",
             "version": "1.0.0",
