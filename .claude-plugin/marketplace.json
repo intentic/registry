@@ -236,25 +236,11 @@
             "version": "1.0.0",
             "kind": "extension",
             "trust": "listed",
-            "securityReview": {
-                "sha": "cc1cb17eff676fa0fe4e4ba674518febe56cc7cf",
-                "url": "https://github.com/intentic/extension-knowledge.git",
-                "policy": "intentic-extension-security-v1",
-                "reviewer": "intentic-agent-gate",
-                "reviewedAt": "2026-10-01T23:44:30.989Z",
-                "runId": "c3c23528",
-                "deterministic": {
-                    "policy": "intentic-extension-deterministic-v1",
-                    "scanner": "trivy",
-                    "version": "0.72.0",
-                    "runId": "36941164804"
-                }
-            },
             "icon": "sitemap",
             "source": {
                 "source": "github",
                 "repo": "intentic/extension-knowledge",
-                "sha": "cc1cb17eff676fa0fe4e4ba674518febe56cc7cf"
+                "sha": "3599cf7cc657bad86e5cf4b9f9d363e61c8f444b"
             }
         },
         {
