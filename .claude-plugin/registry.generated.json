@@ -1,5 +1,5 @@
 {
-    "scannedAt": "2026-10-04T09:48:04.981Z",
+    "scannedAt": "2026-10-05T10:26:53.470Z",
     "entries": [
         {
             "name": "intentic.acceptance",
@@ -26,12 +26,12 @@
         {
             "name": "intentic.deployments",
             "stars": 0,
-            "pushedAt": "2026-10-01T23:22:49Z",
+            "pushedAt": "2026-10-04T11:08:33Z",
             "checks": {
-                "sha": "ee444fd09e018c3b1803fd905f3478f9b42d2014",
+                "sha": "4052058e22e84065d5d2d3ccb0b930b29a4a3319",
                 "manifest": "ok",
                 "bundle": "ok",
-                "engines": "^2.1.0"
+                "engines": "^2.20.0"
             }
         },
         {
@@ -103,12 +103,12 @@
         {
             "name": "intentic.knowledge",
             "stars": 0,
-            "pushedAt": "2026-10-01T23:22:51Z",
+            "pushedAt": "2026-10-04T11:15:56Z",
             "checks": {
-                "sha": "cc1cb17eff676fa0fe4e4ba674518febe56cc7cf",
+                "sha": "3599cf7cc657bad86e5cf4b9f9d363e61c8f444b",
                 "manifest": "ok",
                 "bundle": "ok",
-                "engines": "^2.1.0"
+                "engines": "^2.20.0"
             }
         },
         {
