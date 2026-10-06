@@ -1,5 +1,5 @@
 {
-    "scannedAt": "2026-10-05T10:26:53.470Z",
+    "scannedAt": "2026-10-06T10:18:06.856Z",
     "entries": [
         {
             "name": "intentic.acceptance",
@@ -136,7 +136,7 @@
         {
             "name": "intentic.saldeo",
             "stars": 1,
-            "pushedAt": "2026-09-25T22:10:55Z",
+            "pushedAt": "2026-10-06T09:45:49Z",
             "checks": {
                 "sha": "27e25ebf5b42847eac021ec00a22ed17072c14e0",
                 "manifest": "ok",
