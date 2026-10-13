@@ -24,6 +24,7 @@ jobs:
         runs-on: ubuntu-latest
         outputs:
             needs-attestation: ${{ steps.audit.outputs['needs-attestation'] }}
+            needs-gate: ${{ steps.audit.outputs['needs-gate'] }}
             request: ${{ steps.audit.outputs.request }}
             targets: ${{ steps.audit.outputs.targets }}
             targets-json: ${{ steps.audit.outputs['targets-json'] }}
@@ -139,10 +140,13 @@ jobs:
                   echo "Static registry validation or deterministic security scanning did not pass." >&2
                   exit 1
 
+            # Internal sources (github.com/intentic/<repo>) are admitted on the deterministic scan alone; only outside
+            # sources go to the agent gate. `!= 'false'` fails closed: a scan version that predates the output still
+            # sends everything to the gate.
             # Exact action commit: this is the only third-party step that receives the gate credential. Moving
             # tags cannot replace code in that trust boundary without a reviewed workflow change.
             - name: Read every changed executable sha in the intentic security gate
-              if: needs.prepare.outputs.targets != '0'
+              if: needs.prepare.outputs.targets != '0' && needs.prepare.outputs['needs-gate'] != 'false'
               id: gate
               uses: intentic/gate-action@74e174eadde804d32c90ab21e61231aeea351f86 # v1.192.1
               with:
@@ -152,25 +156,36 @@ jobs:
                   wait: "7200"
                   blocked-as: failure
 
+            - name: Decide whether this run attests
+              id: verdict
+              if: needs.prepare.outputs['needs-attestation'] == 'true'
+              env:
+                  NEEDS_GATE: ${{ needs.prepare.outputs['needs-gate'] }}
+                  GATE_OUTCOME: ${{ steps.gate.outputs.outcome }}
+              run: |
+                  if [[ "$GATE_OUTCOME" == "pass" || "$NEEDS_GATE" == "false" ]]; then
+                      echo "attest=true" >> "$GITHUB_OUTPUT"
+                  fi
+
             # The first passing run writes its run id against the exact source sha. That push creates a new PR
             # head, so branch protection evaluates the gate again on the attested commit before it can merge.
             # A GitHub App token, not GITHUB_TOKEN: commits made by the workflow token deliberately do not
             # trigger another workflow run. The short-lived App token makes the attested head receive its own
             # required admission check, while avoiding a long-lived PAT.
             - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-              if: needs.prepare.outputs['needs-attestation'] == 'true' && steps.gate.outputs.outcome == 'pass'
+              if: steps.verdict.outputs.attest == 'true'
               with:
                   ref: ${{ github.event.pull_request.base.sha }}
                   path: base
                   persist-credentials: false
 
             - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
-              if: needs.prepare.outputs['needs-attestation'] == 'true' && steps.gate.outputs.outcome == 'pass'
+              if: steps.verdict.outputs.attest == 'true'
               with:
                   node-version: "22"
 
             - name: Re-read the candidate registry file at the audited head
-              if: needs.prepare.outputs['needs-attestation'] == 'true' && steps.gate.outputs.outcome == 'pass'
+              if: steps.verdict.outputs.attest == 'true'
               env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name }}
@@ -183,7 +198,7 @@ jobs:
                       > candidate/marketplace.json
 
             - name: Mint the registry bot token
-              if: needs.prepare.outputs['needs-attestation'] == 'true' && steps.gate.outputs.outcome == 'pass'
+              if: steps.verdict.outputs.attest == 'true'
               id: registry-token
               uses: actions/create-github-app-token@fee1f7d63c2ff003460e3d139729b119787bc349 # v2.2.2
               with:
@@ -193,7 +208,7 @@ jobs:
                   permission-pull-requests: read
 
             - name: Bind the passing run to the candidate sha
-              if: needs.prepare.outputs['needs-attestation'] == 'true' && steps.gate.outputs.outcome == 'pass'
+              if: steps.verdict.outputs.attest == 'true'
               env:
                   GH_TOKEN: ${{ steps.registry-token.outputs.token }}
                   HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name }}
@@ -215,7 +230,7 @@ jobs:
                       intentic-registry-scan attest \
                       --base "$GITHUB_WORKSPACE/base/.claude-plugin/marketplace.json" \
                       --candidate "$GITHUB_WORKSPACE/candidate/marketplace.json" \
-                      --run-id "$RUN_ID" \
+                      ${RUN_ID:+--run-id "$RUN_ID"} \
                       --scan-run-id "$SCAN_RUN_ID"
 
                   current="$(gh api "repos/$GITHUB_REPOSITORY/pulls/$PR_NUMBER" --jq .head.sha)"
