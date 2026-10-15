@@ -323,6 +323,19 @@
                 "repo": "radarsu/intentic-saldeo",
                 "sha": "27e25ebf5b42847eac021ec00a22ed17072c14e0"
             }
+        },
+        {
+            "name": "intentic.workflows",
+            "description": "Workflows, designed graphs of agent sessions that each produce a declared output, and saved loop designs: design them, run them, watch the runs, and wire a release gate into CI",
+            "version": "1.0.0",
+            "kind": "extension",
+            "trust": "listed",
+            "icon": "sitemap",
+            "source": {
+                "source": "github",
+                "repo": "intentic/extension-workflows",
+                "sha": "66d523def8cb5c54ecf85bc6f492bf0f1da56057"
+            }
         }
     ]
 }
