@@ -330,6 +330,20 @@
             "version": "1.0.0",
             "kind": "extension",
             "trust": "listed",
+            "securityReview": {
+                "sha": "66d523def8cb5c54ecf85bc6f492bf0f1da56057",
+                "url": "https://github.com/intentic/extension-workflows.git",
+                "policy": "intentic-internal-deterministic-v1",
+                "reviewer": "intentic-deterministic-only",
+                "reviewedAt": "2026-10-15T21:33:50.962Z",
+                "runId": "38810743571",
+                "deterministic": {
+                    "policy": "intentic-extension-deterministic-v1",
+                    "scanner": "trivy",
+                    "version": "0.72.0",
+                    "runId": "38810743571"
+                }
+            },
             "icon": "sitemap",
             "source": {
                 "source": "github",
