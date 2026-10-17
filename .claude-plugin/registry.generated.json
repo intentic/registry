@@ -1,10 +1,10 @@
 {
-    "scannedAt": "2026-10-16T08:11:12.837Z",
+    "scannedAt": "2026-10-17T07:48:31.667Z",
     "entries": [
         {
             "name": "intentic.acceptance",
             "stars": 0,
-            "pushedAt": "2026-10-13T09:00:21Z",
+            "pushedAt": "2026-10-16T13:15:46Z",
             "checks": {
                 "sha": "da19399dd020ce3b087de5273df5003c6cd903c5",
                 "manifest": "ok",
@@ -125,7 +125,7 @@
         {
             "name": "intentic.maintenance",
             "stars": 0,
-            "pushedAt": "2026-10-13T09:00:13Z",
+            "pushedAt": "2026-10-16T13:15:48Z",
             "checks": {
                 "sha": "219d25ee6e9c06907504543c56015cd9e5ef41c1",
                 "manifest": "ok",
