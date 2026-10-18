@@ -61,11 +61,25 @@
             "version": "1.0.0",
             "kind": "extension",
             "trust": "listed",
+            "securityReview": {
+                "sha": "1fd852ed256355fb8318376c44d7c7752800edfc",
+                "url": "https://github.com/intentic/extension-deployments.git",
+                "policy": "intentic-internal-deterministic-v1",
+                "reviewer": "intentic-deterministic-only",
+                "reviewedAt": "2026-10-18T14:29:45.589Z",
+                "runId": "39136181582",
+                "deterministic": {
+                    "policy": "intentic-extension-deterministic-v1",
+                    "scanner": "trivy",
+                    "version": "0.72.0",
+                    "runId": "39136181582"
+                }
+            },
             "icon": "box",
             "source": {
                 "source": "github",
                 "repo": "intentic/extension-deployments",
-                "sha": "4052058e22e84065d5d2d3ccb0b930b29a4a3319"
+                "sha": "1fd852ed256355fb8318376c44d7c7752800edfc"
             }
         },
         {
