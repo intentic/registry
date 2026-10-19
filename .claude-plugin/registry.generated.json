@@ -1,5 +1,5 @@
 {
-    "scannedAt": "2026-10-18T08:02:18.488Z",
+    "scannedAt": "2026-10-19T08:52:56.100Z",
     "entries": [
         {
             "name": "intentic.acceptance",
@@ -26,9 +26,9 @@
         {
             "name": "intentic.deployments",
             "stars": 0,
-            "pushedAt": "2026-10-09T17:32:32Z",
+            "pushedAt": "2026-10-18T14:28:48Z",
             "checks": {
-                "sha": "4052058e22e84065d5d2d3ccb0b930b29a4a3319",
+                "sha": "1fd852ed256355fb8318376c44d7c7752800edfc",
                 "manifest": "ok",
                 "bundle": "ok",
                 "engines": "^2.20.0"
@@ -142,6 +142,17 @@
                 "manifest": "ok",
                 "bundle": "ok",
                 "engines": "^2.20.0"
+            }
+        },
+        {
+            "name": "intentic.workflows",
+            "stars": 0,
+            "pushedAt": "2026-10-15T21:30:14Z",
+            "checks": {
+                "sha": "66d523def8cb5c54ecf85bc6f492bf0f1da56057",
+                "manifest": "ok",
+                "bundle": "ok",
+                "engines": "^2.28.0"
             }
         }
     ]
