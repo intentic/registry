@@ -59,11 +59,30 @@ jobs:
 
             - name: Commit refreshed facts
               run: |
+                  set -euo pipefail
                   git config user.name "intentic-registry-bot"
                   git config user.email "bot@intentic.dev"
                   git add .claude-plugin/registry.generated.json
-                  git diff --cached --quiet || git commit -m "chore: refresh registry facts"
-                  git push
+                  if git diff --cached --quiet; then
+                      exit 0
+                  fi
+                  git commit -m "chore: refresh registry facts"
+                  # GitHub can transiently fail to update refs after accepting the pack. Retry the same
+                  # commit only for that server error; permissions and non-fast-forward errors still fail.
+                  for attempt in 1 2 3; do
+                      if push_output="$(git push 2>&1)"; then
+                          printf '%s\n' "$push_output"
+                          exit 0
+                      else
+                          push_status=$?
+                      fi
+                      printf '%s\n' "$push_output" >&2
+                      if [[ "$push_output" != *"remote: fatal error in commit_refs"* ]] || (( attempt == 3 )); then
+                          exit "$push_status"
+                      fi
+                      echo "::warning::GitHub failed to update refs; retrying push in $((attempt * 5))s ($attempt/3)."
+                      sleep "$((attempt * 5))"
+                  done
 
             # One branch per proposal, reusing a branch name that already has an open pull request rather than
             # opening a second one. A closed-without-merge proposal comes back tomorrow — that is deliberate:
