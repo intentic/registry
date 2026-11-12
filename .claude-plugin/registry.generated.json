@@ -1,5 +1,5 @@
 {
-    "scannedAt": "2026-11-11T10:57:54.798Z",
+    "scannedAt": "2026-11-12T11:09:58.017Z",
     "entries": [
         {
             "name": "intentic.acceptance",
@@ -26,7 +26,7 @@
         {
             "name": "intentic.deployments",
             "stars": 0,
-            "pushedAt": "2026-10-27T07:11:52Z",
+            "pushedAt": "2026-11-11T18:24:11Z",
             "checks": {
                 "sha": "1fd852ed256355fb8318376c44d7c7752800edfc",
                 "manifest": "ok",
