@@ -1,5 +1,5 @@
 {
-    "scannedAt": "2026-11-18T11:42:23.405Z",
+    "scannedAt": "2026-11-19T11:39:46.541Z",
     "entries": [
         {
             "name": "intentic.acceptance",
@@ -37,7 +37,7 @@
         {
             "name": "intentic.documentation",
             "stars": 0,
-            "pushedAt": "2026-11-10T07:01:27Z",
+            "pushedAt": "2026-11-18T14:42:02Z",
             "checks": {
                 "sha": "83f003458c5d2df3383366b2974b73023d4951c2",
                 "manifest": "ok",
@@ -103,7 +103,7 @@
         {
             "name": "intentic.knowledge",
             "stars": 0,
-            "pushedAt": "2026-10-27T07:52:50Z",
+            "pushedAt": "2026-11-18T14:42:04Z",
             "checks": {
                 "sha": "3599cf7cc657bad86e5cf4b9f9d363e61c8f444b",
                 "manifest": "ok",
