@@ -364,6 +364,19 @@
                 "repo": "intentic/extension-workflows",
                 "sha": "66d523def8cb5c54ecf85bc6f492bf0f1da56057"
             }
+        },
+        {
+            "name": "intentic.prawo",
+            "kind": "extension",
+            "trust": "listed",
+            "description": "Polish acts from the Sejm's ELI API and court rulings from SAOS, as an agent CLI with citations and an offline cache",
+            "version": "1.0.0",
+            "icon": "book",
+            "source": {
+                "source": "github",
+                "repo": "intentic/extension-prawo",
+                "sha": "1e9f396537324a2f61a0a8738471882b481fb1cc"
+            }
         }
     ]
 }
