@@ -367,10 +367,24 @@
         },
         {
             "name": "intentic.e-urzad",
-            "kind": "extension",
-            "trust": "listed",
             "description": "e-Urząd: EZD RP cases and documents, e-Doręczenia deliveries and proofs, and electronic-signature verification for Polish public offices, as an agent CLI, per-card MCP tools and a rail view",
             "version": "1.0.0",
+            "kind": "extension",
+            "trust": "listed",
+            "securityReview": {
+                "sha": "8ed58cf0cfa230e4301382007866e10101d66fa9",
+                "url": "https://github.com/intentic/extension-e-urzad.git",
+                "policy": "intentic-internal-deterministic-v1",
+                "reviewer": "intentic-deterministic-only",
+                "reviewedAt": "2026-11-24T13:44:08.437Z",
+                "runId": "45406352353",
+                "deterministic": {
+                    "policy": "intentic-extension-deterministic-v1",
+                    "scanner": "trivy",
+                    "version": "0.72.0",
+                    "runId": "45406352353"
+                }
+            },
             "icon": "folder-open",
             "source": {
                 "source": "github",
