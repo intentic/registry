@@ -364,6 +364,19 @@
                 "repo": "intentic/extension-workflows",
                 "sha": "66d523def8cb5c54ecf85bc6f492bf0f1da56057"
             }
+        },
+        {
+            "name": "intentic.e-urzad",
+            "kind": "extension",
+            "trust": "listed",
+            "description": "e-Urząd: EZD RP cases and documents, e-Doręczenia deliveries and proofs, and electronic-signature verification for Polish public offices, as an agent CLI, per-card MCP tools and a rail view",
+            "version": "1.0.0",
+            "icon": "folder-open",
+            "source": {
+                "source": "github",
+                "repo": "intentic/extension-e-urzad",
+                "sha": "8ed58cf0cfa230e4301382007866e10101d66fa9"
+            }
         }
     ]
 }
