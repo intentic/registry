@@ -1,10 +1,10 @@
 {
-    "scannedAt": "2026-11-25T12:55:25.527Z",
+    "scannedAt": "2026-11-26T12:33:37.252Z",
     "entries": [
         {
             "name": "intentic.acceptance",
             "stars": 0,
-            "pushedAt": "2026-10-19T18:43:08Z",
+            "pushedAt": "2026-11-26T10:22:03Z",
             "checks": {
                 "sha": "da19399dd020ce3b087de5273df5003c6cd903c5",
                 "manifest": "ok",
@@ -26,7 +26,7 @@
         {
             "name": "intentic.deployments",
             "stars": 0,
-            "pushedAt": "2026-11-24T22:53:44Z",
+            "pushedAt": "2026-11-26T10:21:51Z",
             "checks": {
                 "sha": "1fd852ed256355fb8318376c44d7c7752800edfc",
                 "manifest": "ok",
@@ -37,7 +37,7 @@
         {
             "name": "intentic.documentation",
             "stars": 0,
-            "pushedAt": "2026-11-18T14:42:02Z",
+            "pushedAt": "2026-11-26T10:21:49Z",
             "checks": {
                 "sha": "83f003458c5d2df3383366b2974b73023d4951c2",
                 "manifest": "ok",
@@ -59,7 +59,7 @@
         {
             "name": "intentic.example",
             "stars": 1,
-            "pushedAt": "2026-10-25T21:22:24Z",
+            "pushedAt": "2026-11-26T08:18:50Z",
             "checks": {
                 "sha": "dbd1433f0913a490f1258fc7551453e56a241b13",
                 "manifest": "ok",
@@ -92,7 +92,7 @@
         {
             "name": "intentic.issues",
             "stars": 0,
-            "pushedAt": "2026-10-19T18:43:09Z",
+            "pushedAt": "2026-11-26T10:22:01Z",
             "checks": {
                 "sha": "79708fd2fea8d1875b2e6917e8bbec6cdcf19ac9",
                 "manifest": "ok",
@@ -103,7 +103,7 @@
         {
             "name": "intentic.knowledge",
             "stars": 0,
-            "pushedAt": "2026-11-18T14:42:04Z",
+            "pushedAt": "2026-11-26T08:18:53Z",
             "checks": {
                 "sha": "3599cf7cc657bad86e5cf4b9f9d363e61c8f444b",
                 "manifest": "ok",
@@ -125,7 +125,7 @@
         {
             "name": "intentic.maintenance",
             "stars": 0,
-            "pushedAt": "2026-10-19T15:33:08Z",
+            "pushedAt": "2026-11-26T10:21:59Z",
             "checks": {
                 "sha": "219d25ee6e9c06907504543c56015cd9e5ef41c1",
                 "manifest": "ok",
@@ -136,7 +136,7 @@
         {
             "name": "intentic.saldeo",
             "stars": 1,
-            "pushedAt": "2026-11-04T08:52:12Z",
+            "pushedAt": "2026-11-26T08:18:42Z",
             "checks": {
                 "sha": "27e25ebf5b42847eac021ec00a22ed17072c14e0",
                 "manifest": "ok",
