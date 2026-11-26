@@ -290,25 +290,11 @@
             "version": "1.0.0",
             "kind": "extension",
             "trust": "listed",
-            "securityReview": {
-                "sha": "219d25ee6e9c06907504543c56015cd9e5ef41c1",
-                "url": "https://github.com/intentic/extension-maintenance.git",
-                "policy": "intentic-extension-security-v1",
-                "reviewer": "intentic-agent-gate",
-                "reviewedAt": "2026-10-01T23:45:21.826Z",
-                "runId": "862ff6f0",
-                "deterministic": {
-                    "policy": "intentic-extension-deterministic-v1",
-                    "scanner": "trivy",
-                    "version": "0.72.0",
-                    "runId": "36941191151"
-                }
-            },
             "icon": "wrench",
             "source": {
                 "source": "github",
                 "repo": "intentic/extension-maintenance",
-                "sha": "219d25ee6e9c06907504543c56015cd9e5ef41c1"
+                "sha": "39175f9c992f7831bed7e1dc59d19d9f3372ea18"
             }
         },
         {
