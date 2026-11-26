@@ -317,25 +317,11 @@
             "version": "1.0.0",
             "kind": "extension",
             "trust": "listed",
-            "securityReview": {
-                "sha": "27e25ebf5b42847eac021ec00a22ed17072c14e0",
-                "url": "https://github.com/radarsu/intentic-saldeo.git",
-                "policy": "intentic-extension-security-v1",
-                "reviewer": "intentic-agent-gate",
-                "reviewedAt": "2026-10-01T23:46:47.481Z",
-                "runId": "905cc314",
-                "deterministic": {
-                    "policy": "intentic-extension-deterministic-v1",
-                    "scanner": "trivy",
-                    "version": "0.72.0",
-                    "runId": "36941200498"
-                }
-            },
             "icon": "credit-card",
             "source": {
                 "source": "github",
                 "repo": "radarsu/intentic-saldeo",
-                "sha": "27e25ebf5b42847eac021ec00a22ed17072c14e0"
+                "sha": "0ec5d0f167a099f2de4b8c1ba2bde069a69668a3"
             }
         },
         {
