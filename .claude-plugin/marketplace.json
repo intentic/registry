@@ -290,6 +290,20 @@
             "version": "1.0.0",
             "kind": "extension",
             "trust": "listed",
+            "securityReview": {
+                "sha": "39175f9c992f7831bed7e1dc59d19d9f3372ea18",
+                "url": "https://github.com/intentic/extension-maintenance.git",
+                "policy": "intentic-internal-deterministic-v1",
+                "reviewer": "intentic-deterministic-only",
+                "reviewedAt": "2026-11-26T21:10:52.545Z",
+                "runId": "45896194285",
+                "deterministic": {
+                    "policy": "intentic-extension-deterministic-v1",
+                    "scanner": "trivy",
+                    "version": "0.72.0",
+                    "runId": "45896194285"
+                }
+            },
             "icon": "wrench",
             "source": {
                 "source": "github",
