@@ -1,5 +1,5 @@
 {
-    "scannedAt": "2026-11-26T12:33:37.252Z",
+    "scannedAt": "2026-11-27T12:20:11.496Z",
     "entries": [
         {
             "name": "intentic.acceptance",
@@ -28,10 +28,10 @@
             "stars": 0,
             "pushedAt": "2026-11-26T10:21:51Z",
             "checks": {
-                "sha": "1fd852ed256355fb8318376c44d7c7752800edfc",
+                "sha": "bab62f7d208a99cb14404288a42592014ed00ecc",
                 "manifest": "ok",
                 "bundle": "ok",
-                "engines": "^2.20.0"
+                "engines": "^2.34.0"
             }
         },
         {
@@ -39,7 +39,7 @@
             "stars": 0,
             "pushedAt": "2026-11-26T10:21:49Z",
             "checks": {
-                "sha": "83f003458c5d2df3383366b2974b73023d4951c2",
+                "sha": "2bced8fb07dda80f9630678aa246f10b7ec4c3ac",
                 "manifest": "ok",
                 "bundle": "ok",
                 "engines": "^2.0.0"
@@ -125,18 +125,18 @@
         {
             "name": "intentic.maintenance",
             "stars": 0,
-            "pushedAt": "2026-11-26T10:21:59Z",
+            "pushedAt": "2026-11-26T21:09:32Z",
             "checks": {
-                "sha": "219d25ee6e9c06907504543c56015cd9e5ef41c1",
+                "sha": "39175f9c992f7831bed7e1dc59d19d9f3372ea18",
                 "manifest": "ok",
                 "bundle": "ok",
-                "engines": "^2.0.0"
+                "engines": "^2.52.0"
             }
         },
         {
             "name": "intentic.saldeo",
             "stars": 1,
-            "pushedAt": "2026-11-26T08:18:42Z",
+            "pushedAt": "2026-11-26T21:09:34Z",
             "checks": {
                 "sha": "27e25ebf5b42847eac021ec00a22ed17072c14e0",
                 "manifest": "ok",
